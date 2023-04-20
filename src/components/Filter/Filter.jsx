@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Filter = props => {
   return (
     <label>
@@ -5,4 +7,8 @@ export const Filter = props => {
       <input name="filter" onChange={props.handleChange}></input>
     </label>
   );
+};
+
+Filter.propTypes = {
+  handleChange: PropTypes.func,
 };

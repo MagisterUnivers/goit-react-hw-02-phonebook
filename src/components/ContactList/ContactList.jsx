@@ -1,14 +1,15 @@
 import { ContactsListEl } from 'components/ContactsListEl/ContactsListEl';
 import PropTypes from 'prop-types';
 
-export const ContactsList = ({ contacts, ChangeId }) => {
+export const ContactsList = ({ contacts, changeId }) => {
   return (
     <ul>
-      <ContactsListEl contacts={contacts} ChangeId={ChangeId} />
+      <ContactsListEl contacts={contacts} changeId={changeId} />
     </ul>
   );
 };
 
 ContactsList.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.shape({})),
+  contacts: PropTypes.arrayOf(PropTypes.shape({ Object })),
+  changeId: PropTypes.func,
 };

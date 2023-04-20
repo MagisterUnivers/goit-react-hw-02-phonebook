@@ -1,4 +1,6 @@
-export const ContactForm = ({ handleChangeId, handleSubmit }) => {
+import PropTypes from 'prop-types';
+
+export const ContactForm = ({ handleSubmit }) => {
   return (
     <div>
       <h1>Name</h1>
@@ -24,4 +26,8 @@ export const ContactForm = ({ handleChangeId, handleSubmit }) => {
       </form>
     </div>
   );
+};
+
+ContactForm.propTypes = {
+  handleSubmit: PropTypes.func,
 };

@@ -43,11 +43,16 @@ export class App extends Component {
     });
   };
 
-  ChangeId = id => {
-    const newContacts = this.state.contacts.filter(
-      contact => contact.id !== id
-    );
-    this.setState({ contacts: newContacts });
+  changeId = id => {
+    // const newContacts = this.state.contacts.filter(
+    //   contact => contact.id !== id
+    // );
+    // this.setState({ contacts: newContacts });
+    this.setState(prevState => {
+      return {
+        contacts: prevState.contacts.filter(contact => contact.id !== id),
+      };
+    });
   };
 
   render() {
@@ -65,7 +70,7 @@ export class App extends Component {
           filteredContacts={this.filteredContacts}
           handleChange={this.handleChange}
         />
-        <ContactsList contacts={filteredContacts} ChangeId={this.ChangeId} />
+        <ContactsList contacts={filteredContacts} changeId={this.changeId} />
       </>
     );
   }
