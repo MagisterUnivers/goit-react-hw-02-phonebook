@@ -10,5 +10,5 @@ export const Filter = props => {
 };
 
 Filter.propTypes = {
-  handleChange: PropTypes.func,
+  handleChange: PropTypes.func.isRequired,
 };

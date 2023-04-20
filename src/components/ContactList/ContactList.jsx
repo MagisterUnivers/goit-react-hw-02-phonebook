@@ -11,5 +11,5 @@ export const ContactsList = ({ contacts, changeId }) => {
 
 ContactsList.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.shape({ Object })),
-  changeId: PropTypes.func,
+  changeId: PropTypes.func.isRequired,
 };

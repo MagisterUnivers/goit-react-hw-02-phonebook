@@ -16,10 +16,10 @@ export const ContactsListEl = ({ contacts, changeId }) => {
 ContactsListEl.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      number: PropTypes.number,
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
     })
   ),
-  ChangeId: PropTypes.func,
+  changeId: PropTypes.func.isRequired,
 };
