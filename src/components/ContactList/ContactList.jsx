@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const ContactsList = ({ contacts, changeId }) => {
   return (
-    <ul>
+    <ul className="">
       <ContactsListEl contacts={contacts} changeId={changeId} />
     </ul>
   );

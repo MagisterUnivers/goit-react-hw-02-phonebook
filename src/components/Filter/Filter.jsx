@@ -2,10 +2,17 @@ import PropTypes from 'prop-types';
 
 export const Filter = props => {
   return (
-    <label>
-      <h2>Find Contacts by name</h2>
-      <input name="filter" onChange={props.handleChange}></input>
-    </label>
+    <div className="wrapper">
+      {' '}
+      <label>
+        <h2 className="title">Find Contacts by name</h2>
+        <input
+          name="filter"
+          className="result"
+          onChange={props.handleChange}
+        ></input>
+      </label>
+    </div>
   );
 };
 
